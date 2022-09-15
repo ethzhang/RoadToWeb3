@@ -26,3 +26,12 @@
 前端开发使用 `Replit` 平台，可以轻松构建 Web 前端并提供了 live server 的能力，可以实时看到网页效果。也可以分享链接给别人体验。
 
 前端框架使用的，`Next.js`。注意修改文件中的智能合约地址，和 ABI数据。
+
+### 有几个地方比较坑
+1. 部署合约时出现 Cannot read properties of undefined (reading ‘provider’)
+
+    - `打开 buy-coffee.js，替换 hre.waffle.provider  →  hre.ethers.provider`
+
+2. 部署到测试网时出现，Cannot find module '@nomiclabs/hardhat-waffle'
+    - 执行 `npm install` 手动进行安装
+
