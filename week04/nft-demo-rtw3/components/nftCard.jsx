@@ -1,4 +1,6 @@
 export const NFTCard = ({ nft }) => {
+    let opensea_url = `https://opensea.io/assets/ethereum/${nft.contract.address}/${nft.id}`;
+    
     return (
         <div className="w-1/5 flex flex-col ">
             <div className="rounded-md">
@@ -13,7 +15,7 @@ export const NFTCard = ({ nft }) => {
                     </p>
                 </div>
 
-                <p className="text-white bg-blue-500 px-4 py-1 w-fit rounded-sm "><a href='https://opensea.io/assets/ethereum/{nft.contract.address}/{nft.id}'>OpenSea</a></p>
+                <p className="text-white bg-blue-500 px-4 py-1 w-fit rounded-sm "><a href="{opensea_url}">OpenSea</a></p>
             </div>
 
         </div>
